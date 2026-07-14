@@ -40,13 +40,6 @@ const MODE_CONFIG = {
     header: CANVAS_HEADER,
     layers: [{ key: "art", label: "單幅畫布牆圖片", frame: [0, 0, 256, 256], safe: [0, 0, 256, 256] }],
   },
-  largePainting: {
-    name: "Custom_Sign_WarMap_C",
-    suffix: "_Sign_WarMap_C",
-    size: 512,
-    header: null,
-    layers: [{ key: "art", label: "大型畫作圖片", frame: [0, 0, 512, 512], safe: [0, 0, 512, 512] }],
-  },
   wallCanvas: {
     name: "Custom_Sign_PaintingCanvas_C",
     suffix: "_Sign_PaintingCanvas_C",
@@ -157,7 +150,6 @@ const I18N = {
     "mode.double": "雙桅中船帆（雙桅船帆）",
     "mode.triple": "三桅大船帆（雙桅 / 帆船大帆）",
     "mode.painting": "單幅畫布牆（Wall Canvas）",
-    "mode.largePainting": "大型畫作 512x512",
     "mode.wallCanvas": "單幅畫布牆 Wall Canvas",
     "mode.wall": "多幅畫作（拼圖牆）",
     "mode.claimFlag": "島嶼領地旗（核心主權旗）",
@@ -194,7 +186,6 @@ const I18N = {
     "layer.triple.middle": "中帆",
     "layer.triple.bottom": "下帆",
     "layer.painting.art": "單幅畫布牆圖片",
-    "layer.largePainting.art": "大型畫作圖片",
     "layer.wallCanvas.art": "畫布牆圖片",
     "layer.wall.art": "拼圖牆圖片",
     "layer.singleFlag.art": "獨立旗幟圖片",
@@ -254,7 +245,6 @@ const I18N = {
     "mode.double": "Double Medium Sail",
     "mode.triple": "Triple Large Sail",
     "mode.painting": "Wall Canvas",
-    "mode.largePainting": "Large Painting 512x512",
     "mode.wallCanvas": "Single Wall Canvas",
     "mode.wall": "Multi-canvas Wall Mosaic",
     "mode.claimFlag": "Island Claim Flag",
@@ -291,7 +281,6 @@ const I18N = {
     "layer.triple.middle": "Middle sail",
     "layer.triple.bottom": "Bottom sail",
     "layer.painting.art": "Wall canvas image",
-    "layer.largePainting.art": "Large painting image",
     "layer.wallCanvas.art": "Wall canvas image",
     "layer.wall.art": "Mosaic image",
     "layer.singleFlag.art": "Single flag image",
@@ -339,7 +328,6 @@ const LANGUAGE_ALIASES = {
     "mode.double": "二枚帆（中型帆）",
     "mode.triple": "三枚帆（大型帆）",
     "mode.painting": "絵画 PaintingCanvas",
-    "mode.largePainting": "大型絵画 512x512",
     "mode.wallCanvas": "単体ウォールキャンバス",
     "mode.wall": "複数絵画（壁モザイク）",
     "mode.singleFlag": "片面旗 Single Flag",
@@ -374,7 +362,6 @@ const LANGUAGE_ALIASES = {
     "mode.double": "쌍돛(중형)",
     "mode.triple": "삼중 돛(대형)",
     "mode.painting": "그림 PaintingCanvas",
-    "mode.largePainting": "대형 그림 512x512",
     "mode.wallCanvas": "단일 벽 캔버스",
     "mode.wall": "여러 그림(벽 퍼즐)",
     "mode.singleFlag": "단면 깃발",
@@ -409,7 +396,6 @@ const LANGUAGE_ALIASES = {
     "mode.double": "ใบเรือคู่ (กลาง)",
     "mode.triple": "ใบเรือสามชั้น (ใหญ่)",
     "mode.painting": "ภาพวาด PaintingCanvas",
-    "mode.largePainting": "ภาพวาดใหญ่ 512x512",
     "mode.wallCanvas": "ผืนผ้าใบติดผนังเดี่ยว",
     "mode.wall": "ผนังภาพหลายผืน",
     "mode.singleFlag": "ธงหน้าเดียว",
@@ -444,7 +430,6 @@ const LANGUAGE_ALIASES = {
     "mode.double": "Два паруса (средний)",
     "mode.triple": "Три паруса (большой)",
     "mode.painting": "Картина PaintingCanvas",
-    "mode.largePainting": "Большая картина 512x512",
     "mode.wallCanvas": "Один настенный холст",
     "mode.wall": "Стена из нескольких картин",
     "mode.singleFlag": "Односторонний флаг",
@@ -460,7 +445,7 @@ Object.assign(LANGUAGE_ALIASES.ja, {
   "quality.dither": "写真最適化（ディザー）", "quality.softDither": "写真ソフト", "quality.sharpDither": "写真シャープ", "quality.smooth": "滑らかな色面", "quality.pixel": "ピクセル風", "quality.lineart": "線画 / ロゴ", "quality.bw": "白黒 2 色",
   "remove.none": "削除しない", "remove.dark": "黒/暗色背景", "remove.edgeDark": "外側の暗色のみ", "remove.checker": "白灰チェック", "remove.white": "白背景", "remove.pick": "クリックした色",
   "layer.singleSail.art": "単帆", "layer.double.top": "上帆", "layer.double.bottom": "下帆", "layer.triple.top": "上帆", "layer.triple.middle": "中帆", "layer.triple.bottom": "下帆",
-  "layer.painting.art": "絵画画像", "layer.largePainting.art": "大型絵画画像", "layer.wallCanvas.art": "壁キャンバス画像", "layer.wall.art": "壁モザイク画像", "layer.singleFlag.art": "片面旗画像", "layer.flag.art": "大型旗画像",
+  "layer.painting.art": "絵画画像", "layer.wallCanvas.art": "壁キャンバス画像", "layer.wall.art": "壁モザイク画像", "layer.singleFlag.art": "片面旗画像", "layer.flag.art": "大型旗画像",
   "layer.tattoo.head": "頭", "layer.tattoo.chest": "胸", "layer.tattoo.back": "背中", "layer.tattoo.leftArm": "左腕", "layer.tattoo.rightArm": "右腕", "layer.tattoo.leftLeg": "左脚", "layer.tattoo.rightLeg": "右脚",
 });
 
@@ -471,7 +456,7 @@ Object.assign(LANGUAGE_ALIASES.ko, {
   "quality.dither": "사진 최적화(디더)", "quality.softDither": "부드러운 사진", "quality.sharpDither": "선명한 사진", "quality.smooth": "부드러운 색면", "quality.pixel": "픽셀풍", "quality.lineart": "선화 / 로고", "quality.bw": "흑백 2색",
   "remove.none": "사용 안 함", "remove.dark": "검정/어두운 배경", "remove.edgeDark": "외곽 어두운 색만", "remove.checker": "흰회색 격자", "remove.white": "흰 배경", "remove.pick": "선택한 색",
   "layer.singleSail.art": "단일 돛", "layer.double.top": "위 돛", "layer.double.bottom": "아래 돛", "layer.triple.top": "위 돛", "layer.triple.middle": "중간 돛", "layer.triple.bottom": "아래 돛",
-  "layer.painting.art": "그림 이미지", "layer.largePainting.art": "대형 그림 이미지", "layer.wallCanvas.art": "벽 캔버스 이미지", "layer.wall.art": "벽 퍼즐 이미지", "layer.singleFlag.art": "단면 깃발 이미지", "layer.flag.art": "다면 깃발 이미지",
+  "layer.painting.art": "그림 이미지", "layer.wallCanvas.art": "벽 캔버스 이미지", "layer.wall.art": "벽 퍼즐 이미지", "layer.singleFlag.art": "단면 깃발 이미지", "layer.flag.art": "다면 깃발 이미지",
   "layer.tattoo.head": "머리", "layer.tattoo.chest": "가슴", "layer.tattoo.back": "등", "layer.tattoo.leftArm": "왼팔", "layer.tattoo.rightArm": "오른팔", "layer.tattoo.leftLeg": "왼다리", "layer.tattoo.rightLeg": "오른다리",
 });
 
@@ -482,7 +467,7 @@ Object.assign(LANGUAGE_ALIASES.th, {
   "quality.dither": "ปรับภาพถ่าย (ดิเทอร์)", "quality.softDither": "ภาพถ่ายนุ่ม", "quality.sharpDither": "ภาพถ่ายคม", "quality.smooth": "สีเรียบ", "quality.pixel": "พิกเซล", "quality.lineart": "ลายเส้น / โลโก้", "quality.bw": "ขาวดำ 2 สี",
   "remove.none": "ไม่ลบ", "remove.dark": "พื้นหลังดำ/เข้ม", "remove.edgeDark": "เฉพาะขอบมืด", "remove.checker": "ตารางขาวเทา", "remove.white": "พื้นหลังขาว", "remove.pick": "สีที่เลือก",
   "layer.singleSail.art": "ใบเรือเดี่ยว", "layer.double.top": "ใบบน", "layer.double.bottom": "ใบล่าง", "layer.triple.top": "ใบบน", "layer.triple.middle": "ใบกลาง", "layer.triple.bottom": "ใบล่าง",
-  "layer.painting.art": "ภาพวาด", "layer.largePainting.art": "ภาพวาดใหญ่", "layer.wallCanvas.art": "ภาพผนังเดี่ยว", "layer.wall.art": "ภาพผนังหลายผืน", "layer.singleFlag.art": "ภาพธงหน้าเดียว", "layer.flag.art": "ภาพธงหลายแผง",
+  "layer.painting.art": "ภาพวาด", "layer.wallCanvas.art": "ภาพผนังเดี่ยว", "layer.wall.art": "ภาพผนังหลายผืน", "layer.singleFlag.art": "ภาพธงหน้าเดียว", "layer.flag.art": "ภาพธงหลายแผง",
   "layer.tattoo.head": "หัว", "layer.tattoo.chest": "อก", "layer.tattoo.back": "หลัง", "layer.tattoo.leftArm": "แขนซ้าย", "layer.tattoo.rightArm": "แขนขวา", "layer.tattoo.leftLeg": "ขาซ้าย", "layer.tattoo.rightLeg": "ขาขวา",
 });
 
@@ -493,7 +478,7 @@ Object.assign(LANGUAGE_ALIASES.ru, {
   "quality.dither": "Фото с дизерингом", "quality.softDither": "Мягкое фото", "quality.sharpDither": "Резкое фото", "quality.smooth": "Гладкие цвета", "quality.pixel": "Пиксельный стиль", "quality.lineart": "Лайнарт / Лого", "quality.bw": "Черно-белый",
   "remove.none": "Не удалять", "remove.dark": "Черный/темный фон", "remove.edgeDark": "Только внешний темный", "remove.checker": "Бело-серая сетка", "remove.white": "Белый фон", "remove.pick": "Выбранный цвет",
   "layer.singleSail.art": "Один парус", "layer.double.top": "Верхний парус", "layer.double.bottom": "Нижний парус", "layer.triple.top": "Верхний парус", "layer.triple.middle": "Средний парус", "layer.triple.bottom": "Нижний парус",
-  "layer.painting.art": "Изображение картины", "layer.largePainting.art": "Большая картина", "layer.wallCanvas.art": "Настенный холст", "layer.wall.art": "Мозаика стены", "layer.singleFlag.art": "Односторонний флаг", "layer.flag.art": "Многопанельный флаг",
+  "layer.painting.art": "Изображение картины", "layer.wallCanvas.art": "Настенный холст", "layer.wall.art": "Мозаика стены", "layer.singleFlag.art": "Односторонний флаг", "layer.flag.art": "Многопанельный флаг",
   "layer.tattoo.head": "Голова", "layer.tattoo.chest": "Грудь", "layer.tattoo.back": "Спина", "layer.tattoo.leftArm": "Левая рука", "layer.tattoo.rightArm": "Правая рука", "layer.tattoo.leftLeg": "Левая нога", "layer.tattoo.rightLeg": "Правая нога",
 });
 
@@ -512,7 +497,6 @@ const MODE_ICON_KIND = {
   singleFlag: "flag",
   flag: "flag",
   painting: "canvas",
-  largePainting: "canvas",
   wallCanvas: "canvas",
   wall: "canvas",
   signboard: "canvas",
