@@ -57,6 +57,21 @@ body {
   max-height: none;
 }
 
+.adPanel {
+  grid-column: 1 / -1;
+  min-height: 90px;
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 8px;
+}
+
+.adsbygoogle {
+  max-width: 100%;
+}
+
 .topInfoHeader {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -476,6 +491,11 @@ canvas {
     padding: 10px;
   }
 
+  .adPanel {
+    min-height: 74px;
+    padding: 6px;
+  }
+
   .leftPanel,
   .rightPanel {
     overflow: visible;
@@ -586,6 +606,11 @@ canvas {
   .panel {
     border-radius: 6px;
     padding: 8px;
+  }
+
+  .adPanel {
+    border-radius: 6px;
+    min-height: 64px;
   }
 
   .hint,
