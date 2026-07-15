@@ -698,7 +698,12 @@ canvas {
   border: 1px solid var(--line);
   background: transparent;
   user-select: none;
-  touch-action: manipulation;
+  touch-action: none;
+  cursor: grab;
+}
+
+canvas.isDragging {
+  cursor: grabbing;
 }
 
 .dyeList {

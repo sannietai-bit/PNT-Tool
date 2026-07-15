@@ -312,7 +312,6 @@ const I18N = {
     "remove.edgeDark": "只去外圍黑底",
     "remove.checker": "白灰格去背",
     "remove.white": "白底去背",
-    "remove.pick": "點選顏色去背",
     "layer.singleSail.art": "單桅帆",
     "layer.double.top": "上帆",
     "layer.double.bottom": "下帆",
@@ -425,7 +424,6 @@ const I18N = {
     "remove.edgeDark": "Outer dark only",
     "remove.checker": "White-gray checker",
     "remove.white": "White background",
-    "remove.pick": "Picked color",
     "layer.singleSail.art": "Single sail",
     "layer.double.top": "Top sail",
     "layer.double.bottom": "Bottom sail",
@@ -685,7 +683,7 @@ Object.assign(LANGUAGE_ALIASES.ja, {
   "fit.contain": "全体を入れる", "fit.cover": "塗りつぶし / 切り抜き",
   "palette.all": "すべて", "palette.5": "最大 5 色", "palette.10": "最大 10 色", "palette.20": "最大 20 色", "palette.30": "最大 30 色",
   "quality.dither": "写真最適化（ディザー）", "quality.softDither": "写真ソフト", "quality.sharpDither": "写真シャープ", "quality.smooth": "滑らかな色面", "quality.pixel": "ピクセル風", "quality.lineart": "線画 / ロゴ", "quality.bw": "白黒 2 色",
-  "remove.none": "削除しない", "remove.dark": "黒/暗色背景", "remove.edgeDark": "外側の暗色のみ", "remove.checker": "白灰チェック", "remove.white": "白背景", "remove.pick": "クリックした色",
+  "remove.none": "削除しない", "remove.dark": "黒/暗色背景", "remove.edgeDark": "外側の暗色のみ", "remove.checker": "白灰チェック", "remove.white": "白背景",
   "layer.singleSail.art": "単帆", "layer.double.top": "上帆", "layer.double.bottom": "下帆", "layer.triple.top": "上帆", "layer.triple.middle": "中帆", "layer.triple.bottom": "下帆",
   "layer.painting.art": "絵画画像", "layer.wallCanvas.art": "壁キャンバス画像", "layer.wall.art": "壁モザイク画像", "layer.singleFlag.art": "片面旗画像", "layer.flag.art": "大型旗画像",
   "layer.tattoo.head": "頭", "layer.tattoo.chest": "胸", "layer.tattoo.back": "背中", "layer.tattoo.leftArm": "左腕", "layer.tattoo.rightArm": "右腕", "layer.tattoo.leftLeg": "左脚", "layer.tattoo.rightLeg": "右脚",
@@ -696,7 +694,7 @@ Object.assign(LANGUAGE_ALIASES.ko, {
   "fit.contain": "전체 넣기", "fit.cover": "채우기 / 자르기",
   "palette.all": "전체", "palette.5": "최대 5색", "palette.10": "최대 10색", "palette.20": "최대 20색", "palette.30": "최대 30색",
   "quality.dither": "사진 최적화(디더)", "quality.softDither": "부드러운 사진", "quality.sharpDither": "선명한 사진", "quality.smooth": "부드러운 색면", "quality.pixel": "픽셀풍", "quality.lineart": "선화 / 로고", "quality.bw": "흑백 2색",
-  "remove.none": "사용 안 함", "remove.dark": "검정/어두운 배경", "remove.edgeDark": "외곽 어두운 색만", "remove.checker": "흰회색 격자", "remove.white": "흰 배경", "remove.pick": "선택한 색",
+  "remove.none": "사용 안 함", "remove.dark": "검정/어두운 배경", "remove.edgeDark": "외곽 어두운 색만", "remove.checker": "흰회색 격자", "remove.white": "흰 배경",
   "layer.singleSail.art": "단일 돛", "layer.double.top": "위 돛", "layer.double.bottom": "아래 돛", "layer.triple.top": "위 돛", "layer.triple.middle": "중간 돛", "layer.triple.bottom": "아래 돛",
   "layer.painting.art": "그림 이미지", "layer.wallCanvas.art": "벽 캔버스 이미지", "layer.wall.art": "벽 퍼즐 이미지", "layer.singleFlag.art": "단면 깃발 이미지", "layer.flag.art": "다면 깃발 이미지",
   "layer.tattoo.head": "머리", "layer.tattoo.chest": "가슴", "layer.tattoo.back": "등", "layer.tattoo.leftArm": "왼팔", "layer.tattoo.rightArm": "오른팔", "layer.tattoo.leftLeg": "왼다리", "layer.tattoo.rightLeg": "오른다리",
@@ -707,7 +705,7 @@ Object.assign(LANGUAGE_ALIASES.th, {
   "fit.contain": "ใส่ทั้งภาพ", "fit.cover": "เต็มกรอบ / ครอบตัด",
   "palette.all": "ทั้งหมด", "palette.5": "สูงสุด 5 สี", "palette.10": "สูงสุด 10 สี", "palette.20": "สูงสุด 20 สี", "palette.30": "สูงสุด 30 สี",
   "quality.dither": "ปรับภาพถ่าย (ดิเทอร์)", "quality.softDither": "ภาพถ่ายนุ่ม", "quality.sharpDither": "ภาพถ่ายคม", "quality.smooth": "สีเรียบ", "quality.pixel": "พิกเซล", "quality.lineart": "ลายเส้น / โลโก้", "quality.bw": "ขาวดำ 2 สี",
-  "remove.none": "ไม่ลบ", "remove.dark": "พื้นหลังดำ/เข้ม", "remove.edgeDark": "เฉพาะขอบมืด", "remove.checker": "ตารางขาวเทา", "remove.white": "พื้นหลังขาว", "remove.pick": "สีที่เลือก",
+  "remove.none": "ไม่ลบ", "remove.dark": "พื้นหลังดำ/เข้ม", "remove.edgeDark": "เฉพาะขอบมืด", "remove.checker": "ตารางขาวเทา", "remove.white": "พื้นหลังขาว",
   "layer.singleSail.art": "ใบเรือเดี่ยว", "layer.double.top": "ใบบน", "layer.double.bottom": "ใบล่าง", "layer.triple.top": "ใบบน", "layer.triple.middle": "ใบกลาง", "layer.triple.bottom": "ใบล่าง",
   "layer.painting.art": "ภาพวาด", "layer.wallCanvas.art": "ภาพผนังเดี่ยว", "layer.wall.art": "ภาพผนังหลายผืน", "layer.singleFlag.art": "ภาพธงหน้าเดียว", "layer.flag.art": "ภาพธงหลายแผง",
   "layer.tattoo.head": "หัว", "layer.tattoo.chest": "อก", "layer.tattoo.back": "หลัง", "layer.tattoo.leftArm": "แขนซ้าย", "layer.tattoo.rightArm": "แขนขวา", "layer.tattoo.leftLeg": "ขาซ้าย", "layer.tattoo.rightLeg": "ขาขวา",
@@ -718,7 +716,7 @@ Object.assign(LANGUAGE_ALIASES.ru, {
   "fit.contain": "Поместить целиком", "fit.cover": "Заполнить / обрезать",
   "palette.all": "Все", "palette.5": "До 5 цветов", "palette.10": "До 10 цветов", "palette.20": "До 20 цветов", "palette.30": "До 30 цветов",
   "quality.dither": "Фото с дизерингом", "quality.softDither": "Мягкое фото", "quality.sharpDither": "Резкое фото", "quality.smooth": "Гладкие цвета", "quality.pixel": "Пиксельный стиль", "quality.lineart": "Лайнарт / Лого", "quality.bw": "Черно-белый",
-  "remove.none": "Не удалять", "remove.dark": "Черный/темный фон", "remove.edgeDark": "Только внешний темный", "remove.checker": "Бело-серая сетка", "remove.white": "Белый фон", "remove.pick": "Выбранный цвет",
+  "remove.none": "Не удалять", "remove.dark": "Черный/темный фон", "remove.edgeDark": "Только внешний темный", "remove.checker": "Бело-серая сетка", "remove.white": "Белый фон",
   "layer.singleSail.art": "Один парус", "layer.double.top": "Верхний парус", "layer.double.bottom": "Нижний парус", "layer.triple.top": "Верхний парус", "layer.triple.middle": "Средний парус", "layer.triple.bottom": "Нижний парус",
   "layer.painting.art": "Изображение картины", "layer.wallCanvas.art": "Настенный холст", "layer.wall.art": "Мозаика стены", "layer.singleFlag.art": "Односторонний флаг", "layer.flag.art": "Многопанельный флаг",
   "layer.tattoo.head": "Голова", "layer.tattoo.chest": "Грудь", "layer.tattoo.back": "Спина", "layer.tattoo.leftArm": "Левая рука", "layer.tattoo.rightArm": "Правая рука", "layer.tattoo.leftLeg": "Левая нога", "layer.tattoo.rightLeg": "Правая нога",
@@ -833,10 +831,10 @@ const ctx = els.canvas.getContext("2d", { willReadFrequently: true });
 const state = {
   images: {},
   controls: {},
-  picked: null,
   lastBuffer: null,
   lastPreview: null,
   activeLayerKey: null,
+  dragPreview: null,
   language: "zh-TW",
   game: "atlas",
 };
@@ -1168,19 +1166,12 @@ function removeBackground(imageData) {
   const h = imageData.height;
   const fill = els.transparentBg.checked ? TRANSPARENT : colorToRgba(els.fillColor.value);
 
-  const closeToPicked = (r, g, b) => {
-    if (!state.picked) return false;
-    const [pr, pg, pb] = state.picked;
-    return Math.abs(r - pr) + Math.abs(g - pg) + Math.abs(b - pb) <= threshold * 3;
-  };
-
   const isBg = (i) => {
     const r = data[i], g = data[i + 1], b = data[i + 2], a = data[i + 3];
     if (a < 16) return true;
     if (mode === "dark" || mode === "edgeDark") return Math.max(r, g, b) <= threshold;
     if (mode === "white") return Math.min(r, g, b) >= 255 - threshold;
     if (mode === "checker") return Math.max(r, g, b) > 190 && Math.max(r, g, b) - Math.min(r, g, b) < 45;
-    if (mode === "pick") return closeToPicked(r, g, b);
     return false;
   };
 
@@ -1759,10 +1750,15 @@ function render() {
 function updatePreviewZoom() {
   const zoom = Number(els.previewZoom.value || 100);
   const wrapRect = els.canvasWrap.getBoundingClientRect();
+  const panel = els.canvasWrap.closest(".previewPanel");
+  const panelHeight = panel ? panel.clientHeight : 0;
   const isMobile = window.matchMedia("(max-width: 820px)").matches;
   const safeWidth = Math.max(80, wrapRect.width - 28);
   const visibleHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-  const safeHeight = Math.max(80, (isMobile ? Math.min(wrapRect.height || visibleHeight * 0.68, visibleHeight * 0.68) : wrapRect.height) - 32);
+  const wrapTop = panel ? els.canvasWrap.offsetTop : 0;
+  const stableHeight = panelHeight ? panelHeight - wrapTop - 24 : wrapRect.height;
+  const mobileHeight = Math.min(stableHeight || visibleHeight * 0.68, visibleHeight * 0.68);
+  const safeHeight = Math.max(80, (isMobile ? mobileHeight : stableHeight || wrapRect.height) - 32);
   const maxPreview = isMobile ? 640 : 760;
   const baseSize = Math.min(safeWidth, safeHeight, maxPreview);
   els.canvas.style.setProperty("--preview-size", `${Math.max(32, baseSize * zoom / 100)}px`);
@@ -1931,6 +1927,83 @@ function downloadWall(kind) {
   renderWall();
 }
 
+function clampValue(value, min, max) {
+  return Math.max(min, Math.min(max, value));
+}
+
+function activeImageLayerKey() {
+  const config = MODE_CONFIG[els.mode.value];
+  if (state.activeLayerKey && state.images[state.activeLayerKey] && state.controls[state.activeLayerKey]) {
+    return state.activeLayerKey;
+  }
+  const layer = config.layers.find((item) => state.images[item.key] && state.controls[item.key]);
+  return layer ? layer.key : null;
+}
+
+function previewDeltaToControlDelta(dx, dy) {
+  if (!MODE_CONFIG[els.mode.value].wall) return [dx, dy];
+  const { cols, rows } = wallGrid();
+  const wallW = SIZE * cols;
+  const wallH = SIZE * rows;
+  const available = SIZE - WALL_PREVIEW_PADDING * 2;
+  const fitScale = Math.min(available / wallW, available / wallH) || 1;
+  return [dx / fitScale / cols, dy / fitScale / rows];
+}
+
+function adjustActiveLayerPosition(dx, dy) {
+  const key = activeImageLayerKey();
+  if (!key) return false;
+  const control = state.controls[key];
+  const [moveX, moveY] = previewDeltaToControlDelta(dx, dy);
+  const nextX = clampValue(Number(control.x.value) + moveX, Number(control.x.min), Number(control.x.max));
+  const nextY = clampValue(Number(control.y.value) + moveY, Number(control.y.min), Number(control.y.max));
+  control.x.value = String(Math.round(nextX));
+  control.y.value = String(Math.round(nextY));
+  state.activeLayerKey = key;
+  render();
+  return true;
+}
+
+function canvasPoint(event) {
+  const rect = els.canvas.getBoundingClientRect();
+  return {
+    x: (event.clientX - rect.left) * els.canvas.width / rect.width,
+    y: (event.clientY - rect.top) * els.canvas.height / rect.height,
+  };
+}
+
+function startPreviewDrag(event) {
+  if (event.button !== 0) return;
+  const key = activeImageLayerKey();
+  if (!key) return;
+  event.preventDefault();
+  const point = canvasPoint(event);
+  state.dragPreview = { pointerId: event.pointerId, lastX: point.x, lastY: point.y };
+  state.activeLayerKey = key;
+  els.canvas.setPointerCapture(event.pointerId);
+  els.canvas.classList.add("isDragging");
+}
+
+function movePreviewDrag(event) {
+  const drag = state.dragPreview;
+  if (!drag || drag.pointerId !== event.pointerId) return;
+  event.preventDefault();
+  const point = canvasPoint(event);
+  const dx = point.x - drag.lastX;
+  const dy = point.y - drag.lastY;
+  drag.lastX = point.x;
+  drag.lastY = point.y;
+  if (Math.abs(dx) > 0.05 || Math.abs(dy) > 0.05) adjustActiveLayerPosition(dx, dy);
+}
+
+function endPreviewDrag(event) {
+  const drag = state.dragPreview;
+  if (!drag || drag.pointerId !== event.pointerId) return;
+  state.dragPreview = null;
+  els.canvas.classList.remove("isDragging");
+  if (els.canvas.hasPointerCapture(event.pointerId)) els.canvas.releasePointerCapture(event.pointerId);
+}
+
 els.languageBar.addEventListener("click", (event) => {
   const button = event.target.closest("[data-lang]");
   if (!button || button.dataset.lang === state.language) return;
@@ -1954,20 +2027,10 @@ els.canvasWrap.addEventListener("dblclick", (event) => {
   event.preventDefault();
   event.stopPropagation();
 });
-els.canvas.addEventListener("click", (event) => {
-  if (event.detail > 1) {
-    event.preventDefault();
-    return;
-  }
-  const rect = els.canvas.getBoundingClientRect();
-  const x = Math.floor((event.clientX - rect.left) * els.canvas.width / rect.width);
-  const y = Math.floor((event.clientY - rect.top) * els.canvas.height / rect.height);
-  const design = buildDesign();
-  const pixel = design.getContext("2d", { willReadFrequently: true }).getImageData(x, y, 1, 1).data;
-  state.picked = [pixel[0], pixel[1], pixel[2]];
-  els.removeMode.value = "pick";
-  render();
-});
+els.canvas.addEventListener("pointerdown", startPreviewDrag);
+els.canvas.addEventListener("pointermove", movePreviewDrag);
+els.canvas.addEventListener("pointerup", endPreviewDrag);
+els.canvas.addEventListener("pointercancel", endPreviewDrag);
 
 applyLanguage();
 setupUploads();
