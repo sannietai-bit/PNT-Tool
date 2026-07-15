@@ -29,7 +29,7 @@ body {
 .app {
   display: grid;
   grid-template-columns: minmax(230px, 280px) minmax(520px, 1fr) minmax(230px, 280px);
-  grid-template-rows: auto auto minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
   gap: 12px;
   max-width: 1500px;
   height: 100vh;
@@ -55,26 +55,6 @@ body {
 .topInfo {
   grid-column: 1 / -1;
   max-height: none;
-}
-
-.adPanel {
-  grid-column: 1 / -1;
-  min-height: 0;
-  height: 72px;
-  max-height: 72px;
-  display: block;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--panel);
-  padding: 8px;
-}
-
-.adsbygoogle {
-  max-width: 100%;
-  height: 56px !important;
-  max-height: 56px;
-  overflow: hidden;
 }
 
 .topInfoHeader {
@@ -496,18 +476,6 @@ canvas {
     padding: 10px;
   }
 
-  .adPanel {
-    height: 58px;
-    max-height: 58px;
-    min-height: 0;
-    padding: 6px;
-  }
-
-  .adsbygoogle {
-    height: 44px !important;
-    max-height: 44px;
-  }
-
   .leftPanel,
   .rightPanel {
     overflow: visible;
@@ -618,18 +586,6 @@ canvas {
   .panel {
     border-radius: 6px;
     padding: 8px;
-  }
-
-  .adPanel {
-    border-radius: 6px;
-    height: 52px;
-    max-height: 52px;
-    min-height: 0;
-  }
-
-  .adsbygoogle {
-    height: 38px !important;
-    max-height: 38px;
   }
 
   .hint,
