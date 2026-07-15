@@ -858,7 +858,6 @@ function drawFrames(targetCtx) {
   const config = MODE_CONFIG[els.mode.value];
   targetCtx.save();
   targetCtx.lineWidth = 1;
-  targetCtx.font = "10px sans-serif";
   if (config.guide === "tattoo") {
     drawTattooGuide(targetCtx);
   }
@@ -866,14 +865,31 @@ function drawFrames(targetCtx) {
     const [x, y, w, h] = layer.frame;
     targetCtx.strokeStyle = "rgba(255,255,255,.9)";
     targetCtx.strokeRect(x + 0.5, y + 0.5, w - 1, h - 1);
-    targetCtx.fillStyle = "rgba(255,255,255,.9)";
-    targetCtx.fillText(layerLabel(layer), x + 3, y + 11);
+    drawGuideLabel(targetCtx, layerLabel(layer), x + 3, y + 3, 13);
     const [sx, sy, sw, sh] = layer.safe;
     targetCtx.setLineDash([4, 3]);
     targetCtx.strokeStyle = "rgba(255,60,60,.95)";
     targetCtx.strokeRect(sx + 0.5, sy + 0.5, sw - 1, sh - 1);
     targetCtx.setLineDash([]);
   }
+  targetCtx.restore();
+}
+
+function drawGuideLabel(targetCtx, label, x, y, size = 12) {
+  targetCtx.save();
+  targetCtx.font = `700 ${size}px "Microsoft JhengHei", "Segoe UI", sans-serif`;
+  targetCtx.textBaseline = "top";
+  targetCtx.lineJoin = "round";
+  const metrics = targetCtx.measureText(label);
+  const labelW = Math.ceil(metrics.width) + 7;
+  const labelH = size + 5;
+  targetCtx.fillStyle = "rgba(7, 12, 16, .72)";
+  targetCtx.fillRect(x - 2, y - 2, labelW, labelH);
+  targetCtx.lineWidth = 3;
+  targetCtx.strokeStyle = "rgba(0,0,0,.95)";
+  targetCtx.strokeText(label, x + 2, y + 1);
+  targetCtx.fillStyle = "rgba(255,255,255,.98)";
+  targetCtx.fillText(label, x + 2, y + 1);
   targetCtx.restore();
 }
 
@@ -889,17 +905,15 @@ function drawTattooGuide(targetCtx) {
   ];
   targetCtx.save();
   targetCtx.strokeStyle = "rgba(255,255,255,.85)";
-  targetCtx.fillStyle = "rgba(255,255,255,.9)";
   targetCtx.setLineDash([5, 4]);
   for (const [label, x, y, w, h] of parts) {
     targetCtx.strokeRect(x + 0.5, y + 0.5, w, h);
-    targetCtx.fillText(label, x + 3, y + 12);
+    drawGuideLabel(targetCtx, label, x + 3, y + 3, 10);
   }
   targetCtx.setLineDash([]);
   targetCtx.strokeStyle = "rgba(72,196,216,.9)";
   targetCtx.strokeRect(0.5, 0.5, 255, 255);
-  targetCtx.fillStyle = "rgba(72,196,216,.95)";
-  targetCtx.fillText(t("tattooGuide"), 6, 248);
+  drawGuideLabel(targetCtx, t("tattooGuide"), 6, 238, 10);
   targetCtx.restore();
 }
 
