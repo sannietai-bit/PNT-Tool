@@ -814,7 +814,7 @@ function ensureGameTabs() {
   tabs.className = "gameTabs";
   tabs.innerHTML = `
     <button type="button" class="gameTab" data-game="ark"><span class="gameTabIcon" aria-hidden="true"><svg viewBox="0 0 64 64" role="img"><path fill="currentColor" d="M12 34c0-12 10-22 24-22h13l-6 8 9 3-8 7h-9l5 5h10l-6 8H31l-4 9H15l6-13c-6-1-9-2-9-5Z"/><path fill="#111820" d="M36 22h5v5h-5z"/><path fill="#e8eef2" d="M35 36h5l-3 5-2-5Zm8 0h5l-3 5-2-5Zm-16 4h5l-3 5-2-5Z"/><path fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" d="M19 33c5 2 10 2 15 0"/></svg></span><span>ARK</span></button>
-    <button type="button" class="gameTab" data-game="atlas"><span aria-hidden="true">✦</span><span>Atlas</span></button>
+    <button type="button" class="gameTab" data-game="atlas"><span class="gameTabIcon" aria-hidden="true"><svg viewBox="0 0 64 64" role="img"><path fill="#ffd166" d="M29 8v36h-4L29 8Z"/><path fill="#48c4d8" d="M32 10c10 8 14 20 14 34H32V10Z"/><path fill="#f08a4b" d="M26 18c-7 8-10 17-10 26h10V18Z"/><path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M11 50h42M30 8v42"/><path fill="currentColor" d="M18 47h29l-5 6H23l-5-6Z"/></svg></span><span>Atlas</span></button>
     <a class="gameTab gameTabLink" href="https://groups.google.com/g/pnt-tool/" target="_blank" rel="noopener"><span aria-hidden="true">☷</span><span>網站討論區</span></a>
   `;
   els.appTitle.insertAdjacentElement("afterend", tabs);
