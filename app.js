@@ -1748,15 +1748,15 @@ function render() {
 }
 
 function updatePreviewZoom() {
+  if (state.dragPreview && els.canvas.style.getPropertyValue("--preview-size")) return;
   const zoom = Number(els.previewZoom.value || 100);
   const wrapRect = els.canvasWrap.getBoundingClientRect();
   const panel = els.canvasWrap.closest(".previewPanel");
-  const panelHeight = panel ? panel.clientHeight : 0;
+  const panelRect = panel ? panel.getBoundingClientRect() : null;
   const isMobile = window.matchMedia("(max-width: 820px)").matches;
   const safeWidth = Math.max(80, wrapRect.width - 28);
   const visibleHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-  const wrapTop = panel ? els.canvasWrap.offsetTop : 0;
-  const stableHeight = panelHeight ? panelHeight - wrapTop - 24 : wrapRect.height;
+  const stableHeight = panelRect ? panelRect.bottom - wrapRect.top - 24 : wrapRect.height;
   const mobileHeight = Math.min(stableHeight || visibleHeight * 0.68, visibleHeight * 0.68);
   const safeHeight = Math.max(80, (isMobile ? mobileHeight : stableHeight || wrapRect.height) - 32);
   const maxPreview = isMobile ? 640 : 760;
@@ -2002,6 +2002,7 @@ function endPreviewDrag(event) {
   state.dragPreview = null;
   els.canvas.classList.remove("isDragging");
   if (els.canvas.hasPointerCapture(event.pointerId)) els.canvas.releasePointerCapture(event.pointerId);
+  updatePreviewZoom();
 }
 
 els.languageBar.addEventListener("click", (event) => {
