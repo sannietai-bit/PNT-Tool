@@ -216,7 +216,7 @@ const GAME_MODE_GROUPS = {
   ],
   atlas: [
     { key: "group.sails", modes: ["singleSail", "double", "triple"] },
-    { key: "group.flags", modes: ["claimFlag", "singleFlag", "flag"] },
+    { key: "group.flags", modes: ["claimFlag", "singleFlag"] },
     { key: "group.structures", modes: ["painting", "signboard", "hangingSign", "billboard"] },
     { key: "group.tools", modes: ["wall", "tattoo"] },
   ],
