@@ -882,7 +882,7 @@ function ensureGameTabs() {
   tabs.addEventListener("click", (event) => {
     const guideButton = event.target.closest("[data-guide]");
     if (guideButton) {
-      toggleGuidePanel();
+      scrollToGuidePanel();
       return;
     }
     const button = event.target.closest("[data-game]");
@@ -900,15 +900,11 @@ function updateGameTabs() {
   for (const button of document.querySelectorAll(".gameTab[data-game]")) {
     button.classList.toggle("isActive", button.dataset.game === state.game);
   }
-  const guideButton = document.querySelector(".gameTab[data-guide]");
-  if (guideButton && els.guidePanel) guideButton.classList.toggle("isActive", !els.guidePanel.hidden);
 }
 
-function toggleGuidePanel(force) {
+function scrollToGuidePanel() {
   if (!els.guidePanel) return;
-  els.guidePanel.hidden = typeof force === "boolean" ? !force : !els.guidePanel.hidden;
-  updateGameTabs();
-  if (!els.guidePanel.hidden) els.guidePanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  els.guidePanel.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function rebuildModeSelect(preserveMode = true) {

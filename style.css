@@ -75,12 +75,13 @@ body[data-game="atlas"] {
 .leftPanel,
 .previewPanel,
 .rightPanel {
-  order: 2;
+  order: 1;
 }
 
 .guidePanel {
   grid-column: 1 / -1;
-  order: 1;
+  order: 2;
+  width: 100%;
 }
 
 .guideSteps {
@@ -156,7 +157,7 @@ body[data-game="atlas"] {
   margin-bottom: 4px;
 }
 
-.seoIntro {
+.seoIntro:not(.srOnly) {
   max-width: 860px;
   margin: 8px 0 0;
   color: #c7d4dd;
