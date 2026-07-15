@@ -1123,6 +1123,7 @@ function setupUploads({ preserveValues = false } = {}) {
     els.uploads.appendChild(row);
   }
   render();
+  requestAnimationFrame(updatePreviewZoom);
 }
 
 function pasteImageFromClipboard(event) {
@@ -1743,7 +1744,6 @@ function render() {
   updateDyes(result.counts);
   const name = outputBaseName();
   els.fileNameHint.textContent = `${name}.pnt / ${name}.png`;
-  updatePreviewZoom();
 }
 
 function updatePreviewZoom() {
@@ -1759,6 +1759,7 @@ function updatePreviewZoom() {
   const safeHeight = Math.max(80, (isMobile ? mobileHeight : stableHeight || wrapRect.height) - 32);
   const maxPreview = isMobile ? 640 : 760;
   const baseSize = Math.min(safeWidth, safeHeight, maxPreview);
+  if (!Number.isFinite(baseSize) || baseSize < 120) return;
   els.canvas.style.setProperty("--preview-size", `${Math.max(32, baseSize * zoom / 100)}px`);
 }
 
@@ -1786,7 +1787,6 @@ function renderWall() {
   const first = wallFileName(0, 0);
   const last = wallFileName(cols - 1, rows - 1);
   els.fileNameHint.textContent = formatText("wallFileSummary", { first, last, count: cols * rows });
-  updatePreviewZoom();
 }
 
 function drawWallFrames(targetCtx, cols, rows, offsetX, offsetY, previewW, previewH) {
