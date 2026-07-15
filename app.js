@@ -834,7 +834,6 @@ const state = {
   lastBuffer: null,
   lastPreview: null,
   activeLayerKey: null,
-  dragPreview: null,
   language: "zh-TW",
   game: "atlas",
 };
@@ -1748,7 +1747,6 @@ function render() {
 }
 
 function updatePreviewZoom() {
-  if (state.dragPreview && els.canvas.style.getPropertyValue("--preview-size")) return;
   const zoom = Number(els.previewZoom.value || 100);
   const wrapRect = els.canvasWrap.getBoundingClientRect();
   const panel = els.canvasWrap.closest(".previewPanel");
@@ -1927,84 +1925,6 @@ function downloadWall(kind) {
   renderWall();
 }
 
-function clampValue(value, min, max) {
-  return Math.max(min, Math.min(max, value));
-}
-
-function activeImageLayerKey() {
-  const config = MODE_CONFIG[els.mode.value];
-  if (state.activeLayerKey && state.images[state.activeLayerKey] && state.controls[state.activeLayerKey]) {
-    return state.activeLayerKey;
-  }
-  const layer = config.layers.find((item) => state.images[item.key] && state.controls[item.key]);
-  return layer ? layer.key : null;
-}
-
-function previewDeltaToControlDelta(dx, dy) {
-  if (!MODE_CONFIG[els.mode.value].wall) return [dx, dy];
-  const { cols, rows } = wallGrid();
-  const wallW = SIZE * cols;
-  const wallH = SIZE * rows;
-  const available = SIZE - WALL_PREVIEW_PADDING * 2;
-  const fitScale = Math.min(available / wallW, available / wallH) || 1;
-  return [dx / fitScale / cols, dy / fitScale / rows];
-}
-
-function adjustActiveLayerPosition(dx, dy) {
-  const key = activeImageLayerKey();
-  if (!key) return false;
-  const control = state.controls[key];
-  const [moveX, moveY] = previewDeltaToControlDelta(dx, dy);
-  const nextX = clampValue(Number(control.x.value) + moveX, Number(control.x.min), Number(control.x.max));
-  const nextY = clampValue(Number(control.y.value) + moveY, Number(control.y.min), Number(control.y.max));
-  control.x.value = String(Math.round(nextX));
-  control.y.value = String(Math.round(nextY));
-  state.activeLayerKey = key;
-  render();
-  return true;
-}
-
-function canvasPoint(event) {
-  const rect = els.canvas.getBoundingClientRect();
-  return {
-    x: (event.clientX - rect.left) * els.canvas.width / rect.width,
-    y: (event.clientY - rect.top) * els.canvas.height / rect.height,
-  };
-}
-
-function startPreviewDrag(event) {
-  if (event.button !== 0) return;
-  const key = activeImageLayerKey();
-  if (!key) return;
-  event.preventDefault();
-  const point = canvasPoint(event);
-  state.dragPreview = { pointerId: event.pointerId, lastX: point.x, lastY: point.y };
-  state.activeLayerKey = key;
-  els.canvas.setPointerCapture(event.pointerId);
-  els.canvas.classList.add("isDragging");
-}
-
-function movePreviewDrag(event) {
-  const drag = state.dragPreview;
-  if (!drag || drag.pointerId !== event.pointerId) return;
-  event.preventDefault();
-  const point = canvasPoint(event);
-  const dx = point.x - drag.lastX;
-  const dy = point.y - drag.lastY;
-  drag.lastX = point.x;
-  drag.lastY = point.y;
-  if (Math.abs(dx) > 0.05 || Math.abs(dy) > 0.05) adjustActiveLayerPosition(dx, dy);
-}
-
-function endPreviewDrag(event) {
-  const drag = state.dragPreview;
-  if (!drag || drag.pointerId !== event.pointerId) return;
-  state.dragPreview = null;
-  els.canvas.classList.remove("isDragging");
-  if (els.canvas.hasPointerCapture(event.pointerId)) els.canvas.releasePointerCapture(event.pointerId);
-  updatePreviewZoom();
-}
-
 els.languageBar.addEventListener("click", (event) => {
   const button = event.target.closest("[data-lang]");
   if (!button || button.dataset.lang === state.language) return;
@@ -2028,10 +1948,6 @@ els.canvasWrap.addEventListener("dblclick", (event) => {
   event.preventDefault();
   event.stopPropagation();
 });
-els.canvas.addEventListener("pointerdown", startPreviewDrag);
-els.canvas.addEventListener("pointermove", movePreviewDrag);
-els.canvas.addEventListener("pointerup", endPreviewDrag);
-els.canvas.addEventListener("pointercancel", endPreviewDrag);
 
 applyLanguage();
 setupUploads();
