@@ -22,7 +22,9 @@ html {
 body {
   margin: 0;
   font-family: "Microsoft JhengHei", "Segoe UI", sans-serif;
-  background: var(--bg);
+  background:
+    linear-gradient(rgba(23, 32, 41, .82), rgba(23, 32, 41, .88)),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-nDBr6xN4Pw7oghPCpgOLZGsglMTyVdq2kBXgO5fmpx4JwTyJXeO2LZCX&s=10") center / cover fixed;
   color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;
@@ -100,6 +102,39 @@ body {
 
 .topInfo h1 {
   margin-bottom: 4px;
+}
+
+.gameTabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  max-width: 360px;
+  margin-top: 12px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(12, 16, 20, .68);
+}
+
+.gameTab {
+  min-height: 34px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.gameTab:hover {
+  filter: none;
+  background: rgba(255, 255, 255, .06);
+  color: var(--text);
+}
+
+.gameTab.isActive {
+  border-color: rgba(72, 196, 216, .9);
+  background: rgba(72, 196, 216, .18);
+  color: var(--text);
 }
 
 .languageField {

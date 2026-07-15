@@ -7,6 +7,42 @@ const GENERIC_SAIL_HEADER = [176,43,136,1,0,1,0,0,0,1,0,0,132,0,0,0,0,0,1,0];
 const CANVAS_HEADER = [1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0];
 
 const MODE_CONFIG = {
+  arkPaintingCanvas: {
+    name: "Custom_PaintingCanvas_C",
+    suffix: "_PaintingCanvas_C",
+    header: CANVAS_HEADER,
+    layers: [{ key: "art", label: "ARK Painting Canvas", frame: [0, 0, 256, 256], safe: [0, 0, 256, 256] }],
+  },
+  arkSmallWoodSign: {
+    name: "Custom_Small_Wood_C",
+    suffix: "_Small_Wood_C",
+    header: CANVAS_HEADER,
+    layers: [{ key: "art", label: "ARK Small Wood Sign", frame: [0, 0, 256, 256], safe: [12, 24, 232, 208] }],
+  },
+  arkLargeWoodSign: {
+    name: "Custom_Large_Wood_C",
+    suffix: "_Large_Wood_C",
+    header: CANVAS_HEADER,
+    layers: [{ key: "art", label: "ARK Large Wood Sign", frame: [0, 0, 256, 256], safe: [10, 18, 236, 220] }],
+  },
+  arkSmallMetalSign: {
+    name: "Custom_Small_Metal_C",
+    suffix: "_Small_Metal_C",
+    header: CANVAS_HEADER,
+    layers: [{ key: "art", label: "ARK Small Metal Sign", frame: [0, 0, 256, 256], safe: [12, 24, 232, 208] }],
+  },
+  arkLargeMetalSign: {
+    name: "Custom_Large_Metal_C",
+    suffix: "_Large_Metal_C",
+    header: CANVAS_HEADER,
+    layers: [{ key: "art", label: "ARK Large Metal Sign", frame: [0, 0, 256, 256], safe: [10, 18, 236, 220] }],
+  },
+  arkWarMap: {
+    name: "Custom_WarMap_C",
+    suffix: "_WarMap_C",
+    header: CANVAS_HEADER,
+    layers: [{ key: "art", label: "ARK War Map", frame: [0, 0, 256, 256], safe: [12, 12, 232, 232] }],
+  },
   singleSail: {
     name: "Custom_SailGeneric_C",
     suffix: "_SailGeneric_C",
@@ -104,6 +140,26 @@ const MODE_CONFIG = {
       { key: "rightLeg", label: "右腿", frame: [132, 130, 48, 100], safe: [138, 138, 36, 84] },
     ],
   },
+};
+
+const GAME_DEFAULT_MODE = {
+  ark: "arkPaintingCanvas",
+  atlas: "painting",
+};
+
+const GAME_MODE_GROUPS = {
+  ark: [
+    {
+      key: "group.arkStructures",
+      modes: ["arkPaintingCanvas", "arkSmallWoodSign", "arkLargeWoodSign", "arkSmallMetalSign", "arkLargeMetalSign", "arkWarMap"],
+    },
+  ],
+  atlas: [
+    { key: "group.sails", modes: ["singleSail", "double", "triple"] },
+    { key: "group.flags", modes: ["claimFlag", "singleFlag", "flag"] },
+    { key: "group.structures", modes: ["painting", "signboard", "hangingSign", "billboard"] },
+    { key: "group.tools", modes: ["wall", "tattoo"] },
+  ],
 };
 
 const I18N = {
@@ -438,6 +494,42 @@ const LANGUAGE_ALIASES = {
   },
 };
 
+Object.assign(I18N["zh-TW"], {
+  appTitle: "PNT Tool",
+  appIntro: "將圖片在本機瀏覽器轉成 ARK / ATLAS 可用的 PNT/PNG，不會上傳；完成後放入對應遊戲的 MyPaintings 資料夾。",
+  "group.arkStructures": "ARK 建築與畫布類",
+  "mode.arkPaintingCanvas": "畫布（Painting Canvas）",
+  "mode.arkSmallWoodSign": "小型木牌（Small Wood Sign）",
+  "mode.arkLargeWoodSign": "大型木牌（Large Wood Sign）",
+  "mode.arkSmallMetalSign": "小型鐵牌（Small Metal Sign）",
+  "mode.arkLargeMetalSign": "大型鐵牌（Large Metal Sign）",
+  "mode.arkWarMap": "戰爭地圖（War Map）",
+  "layer.arkPaintingCanvas.art": "ARK 畫布圖片",
+  "layer.arkSmallWoodSign.art": "小型木牌圖片",
+  "layer.arkLargeWoodSign.art": "大型木牌圖片",
+  "layer.arkSmallMetalSign.art": "小型鐵牌圖片",
+  "layer.arkLargeMetalSign.art": "大型鐵牌圖片",
+  "layer.arkWarMap.art": "戰爭地圖圖片",
+});
+
+Object.assign(I18N.en, {
+  appTitle: "PNT Tool",
+  appIntro: "Convert images locally in your browser into ARK / ATLAS-ready PNT/PNG files; nothing is uploaded. Place finished files in the matching game's MyPaintings folder.",
+  "group.arkStructures": "ARK Structures and Canvases",
+  "mode.arkPaintingCanvas": "Painting Canvas",
+  "mode.arkSmallWoodSign": "Small Wood Sign",
+  "mode.arkLargeWoodSign": "Large Wood Sign",
+  "mode.arkSmallMetalSign": "Small Metal Sign",
+  "mode.arkLargeMetalSign": "Large Metal Sign",
+  "mode.arkWarMap": "War Map",
+  "layer.arkPaintingCanvas.art": "ARK painting canvas image",
+  "layer.arkSmallWoodSign.art": "Small wood sign image",
+  "layer.arkLargeWoodSign.art": "Large wood sign image",
+  "layer.arkSmallMetalSign.art": "Small metal sign image",
+  "layer.arkLargeMetalSign.art": "Large metal sign image",
+  "layer.arkWarMap.art": "War map image",
+});
+
 Object.assign(LANGUAGE_ALIASES.ja, {
   wallCols: "横数", wallRows: "縦数", wallPrefix: "接頭辞", threshold: "背景削除の強さ", fillColor: "背景色", transparentBg: "削除後は透明にする", showFrames: "枠線を表示",
   "fit.contain": "全体を入れる", "fit.cover": "塗りつぶし / 切り抜き",
@@ -490,6 +582,12 @@ const MODE_ICON_SVG = {
 };
 
 const MODE_ICON_KIND = {
+  arkPaintingCanvas: "canvas",
+  arkSmallWoodSign: "canvas",
+  arkLargeWoodSign: "canvas",
+  arkSmallMetalSign: "canvas",
+  arkLargeMetalSign: "canvas",
+  arkWarMap: "canvas",
   singleSail: "sail",
   double: "sail",
   triple: "sail",
@@ -568,6 +666,7 @@ const state = {
   lastBuffer: null,
   lastPreview: null,
   language: "zh-TW",
+  game: "atlas",
 };
 
 function t(key, fallback = "") {
@@ -601,11 +700,58 @@ function localizeSelect(select, prefix) {
   }
 }
 
+function ensureGameTabs() {
+  if (document.getElementById("gameTabs")) return;
+  const tabs = document.createElement("div");
+  tabs.id = "gameTabs";
+  tabs.className = "gameTabs";
+  tabs.innerHTML = `
+    <button type="button" class="gameTab" data-game="ark">ARK</button>
+    <button type="button" class="gameTab" data-game="atlas">Atlas</button>
+  `;
+  els.appTitle.insertAdjacentElement("afterend", tabs);
+  tabs.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-game]");
+    if (!button || button.dataset.game === state.game) return;
+    state.game = button.dataset.game;
+    state.images = {};
+    rebuildModeSelect(false);
+    setupUploads();
+    updateGameTabs();
+  });
+}
+
+function updateGameTabs() {
+  for (const button of document.querySelectorAll(".gameTab[data-game]")) {
+    button.classList.toggle("isActive", button.dataset.game === state.game);
+  }
+}
+
+function rebuildModeSelect(preserveMode = true) {
+  const current = preserveMode ? els.mode.value : "";
+  const groups = GAME_MODE_GROUPS[state.game] || GAME_MODE_GROUPS.atlas;
+  const allowedModes = new Set(groups.flatMap((group) => group.modes));
+  els.mode.innerHTML = "";
+  for (const group of groups) {
+    const optgroup = document.createElement("optgroup");
+    optgroup.label = t(group.key, group.key);
+    for (const mode of group.modes) {
+      const option = document.createElement("option");
+      option.value = mode;
+      option.textContent = t(`mode.${mode}`, mode);
+      optgroup.appendChild(option);
+    }
+    els.mode.appendChild(optgroup);
+  }
+  els.mode.value = allowedModes.has(current) ? current : GAME_DEFAULT_MODE[state.game];
+}
+
 function layerLabel(layer) {
   return t(`layer.${els.mode.value}.${layer.key}`, layer.label);
 }
 
 function applyLanguage() {
+  ensureGameTabs();
   document.documentElement.lang = state.language === "zh-TW" ? "zh-Hant" : state.language;
   document.title = t("appTitle");
   setText(els.appTitle, "appTitle");
@@ -633,7 +779,8 @@ function applyLanguage() {
   setText(els.helpTitle, "helpTitle");
   setText(els.helpText, "helpText");
   setText(els.dyeListTitle, "dyeListTitle");
-  localizeSelect(els.mode, "mode");
+  rebuildModeSelect(true);
+  updateGameTabs();
   localizeSelect(els.fitMode, "fit");
   localizeSelect(els.paletteLimit, "palette");
   localizeSelect(els.qualityMode, "quality");
