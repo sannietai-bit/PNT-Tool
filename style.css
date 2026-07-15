@@ -421,7 +421,7 @@ input[type="color"] {
   display: grid;
   place-items: center;
   border-radius: 8px;
-  background: #111820;
+  background: rgba(17, 24, 32, .58);
   color: var(--accent);
 }
 
@@ -444,7 +444,7 @@ input[type="color"] {
   overflow-wrap: anywhere;
   padding: 2px 5px;
   border-radius: 4px;
-  background: #12171c;
+  background: rgba(18, 23, 28, .56);
   color: var(--muted);
   font-size: 11px;
 }
@@ -491,7 +491,7 @@ input[type="color"] {
   padding: 10px;
   border: 1px dashed #70808e;
   border-radius: 8px;
-  background: rgba(17, 24, 32, .62);
+  background: rgba(17, 24, 32, .42);
   color: var(--text);
   cursor: pointer;
 }
@@ -543,7 +543,7 @@ input[type="color"] {
 
 .quickActions button {
   min-height: 34px;
-  background: #2d3942;
+  background: rgba(45, 57, 66, .58);
   color: var(--text);
   border: 1px solid var(--line);
 }
@@ -567,7 +567,7 @@ button:hover {
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #14181c;
+  background: rgba(20, 24, 28, .52);
   font-size: 12px;
 }
 
