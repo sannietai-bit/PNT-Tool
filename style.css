@@ -373,31 +373,12 @@ input[type="color"] {
 }
 
 .fileNameRow {
-  display: grid;
-  grid-template-columns: minmax(80px, 1fr) auto;
-  align-items: center;
+  display: block;
   min-width: 0;
 }
 
 .fileNameRow input {
-  border-radius: 6px 0 0 6px;
-}
-
-.fixedSuffix {
-  min-height: 38px;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 10px;
-  border: 1px solid var(--line);
-  border-left: 0;
-  border-radius: 0 6px 6px 0;
-  background: #14181c;
-  color: var(--muted);
-  white-space: nowrap;
-  user-select: none;
-  font-size: 14px;
-  max-width: 100%;
-  overflow-wrap: anywhere;
+  border-radius: 6px;
 }
 
 .grid2 {
@@ -835,22 +816,6 @@ canvas {
 
   canvas {
     max-width: 100%;
-  }
-
-  .fileNameRow {
-    grid-template-columns: 1fr;
-  }
-
-  .fileNameRow input {
-    border-radius: 6px 6px 0 0;
-  }
-
-  .fixedSuffix {
-    min-height: 34px;
-    border-left: 1px solid var(--line);
-    border-top: 0;
-    border-radius: 0 0 6px 6px;
-    white-space: normal;
   }
 
   .modeCard {

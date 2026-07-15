@@ -809,7 +809,6 @@ const els = {
   showFramesLabel: document.getElementById("showFramesLabel"),
   outputName: document.getElementById("outputName"),
   outputNameLabel: document.getElementById("outputNameLabel"),
-  fixedSuffix: document.getElementById("fixedSuffix"),
   previewZoom: document.getElementById("previewZoom"),
   wallSettings: document.getElementById("wallSettings"),
   wallCols: document.getElementById("wallCols"),
@@ -1036,7 +1035,6 @@ function setupUploads({ preserveValues = false } = {}) {
     };
   }
   els.outputName.value = preserveValues ? previousName : baseNameWithoutSuffix(config.name, config.suffix);
-  els.fixedSuffix.textContent = config.suffix || "";
   updateModeCard();
   updateWallSettings();
   els.uploads.innerHTML = "";
@@ -1145,7 +1143,6 @@ function updateWallSettings() {
   const isWall = Boolean(MODE_CONFIG[els.mode.value].wall);
   els.wallSettings.classList.toggle("isVisible", isWall);
   els.outputName.parentElement.style.display = isWall ? "none" : "";
-  els.fixedSuffix.style.display = isWall ? "none" : "";
 }
 
 function imageToData(img) {
