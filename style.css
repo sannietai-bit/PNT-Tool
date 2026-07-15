@@ -118,6 +118,7 @@ body[data-game="atlas"] {
   line-height: 1.5;
   font-size: 13px;
   overflow-wrap: anywhere;
+  white-space: pre-line;
 }
 
 .leftPanel::-webkit-scrollbar,
@@ -594,8 +595,7 @@ button:hover {
 
 .previewPanel {
   grid-area: preview;
-  position: sticky;
-  top: 12px;
+  position: static;
   display: grid;
   grid-template-rows: auto auto minmax(0, 1fr);
   min-height: 0;
