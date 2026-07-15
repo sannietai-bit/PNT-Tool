@@ -150,7 +150,7 @@ body[data-game="atlas"] {
   grid-column: 1 / -1;
   order: -1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 2px;
   min-height: 18px;
@@ -757,7 +757,7 @@ canvas {
   }
 
   .languageBar {
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
