@@ -235,9 +235,8 @@ const I18N = {
     wallRows: "直向數量",
     wallPrefix: "前綴",
     wallHint: "檔名格式：Kxy_Sign_PaintingCanvas_C，x 是橫軸，y 是直軸。",
-    previewTitle: "遊戲內預覽",
+    previewTitle: "預覽",
     cropSelectTitle: "選擇影像裁切",
-    cropPreviewTitle: "裁剪預覽",
     uploadDropTitle: "選擇檔案 / 拖放 / 貼上圖片",
     uploadDropHint: "支援 PNG、JPG、WebP。點擊此區或拖放圖片到這裡。",
     guideTab: "操作說明",
@@ -348,9 +347,8 @@ const I18N = {
     wallRows: "Rows",
     wallPrefix: "Prefix",
     wallHint: "File format: Kxy_Sign_PaintingCanvas_C, where x is horizontal and y is vertical.",
-    previewTitle: "In-game Preview",
+    previewTitle: "Preview",
     cropSelectTitle: "Choose Image and Crop",
-    cropPreviewTitle: "Crop Preview",
     uploadDropTitle: "Choose file / drop / paste image",
     uploadDropHint: "PNG, JPG, and WebP are supported. Click here or drop an image.",
     guideTab: "How to Use",
@@ -768,7 +766,6 @@ const els = {
   appTitle: document.getElementById("appTitle"),
   seoIntro: document.getElementById("seoIntro"),
   cropSelectTitle: document.getElementById("cropSelectTitle"),
-  cropPreviewTitle: document.getElementById("cropPreviewTitle"),
   guidePanel: document.getElementById("guidePanel"),
   guideTitle: document.getElementById("guideTitle"),
   guideStep1Title: document.getElementById("guideStep1Title"),
@@ -950,7 +947,6 @@ function applyLanguage() {
   setText(els.appTitle, "appTitle");
   setText(els.seoIntro, "seoIntro");
   setText(els.cropSelectTitle, "cropSelectTitle");
-  setText(els.cropPreviewTitle, "cropPreviewTitle");
   setText(els.guideTitle, "guideTitle");
   setText(els.guideStep1Title, "guideStep1Title");
   setText(els.guideStep1Text, "guideStep1Text");
