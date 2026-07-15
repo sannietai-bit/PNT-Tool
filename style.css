@@ -297,7 +297,9 @@ input[type="color"] {
   grid-template-columns: 42px minmax(0, 1fr);
   gap: 10px;
   align-items: center;
-  margin-top: 10px;
+  justify-self: center;
+  width: min(100%, 360px);
+  margin: 0 0 12px;
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -433,7 +435,7 @@ button:hover {
   position: sticky;
   top: 12px;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr);
   min-height: 0;
   height: calc(100vh - 150px);
   min-height: 520px;
@@ -441,14 +443,20 @@ button:hover {
 }
 
 .previewHeader {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   gap: 12px;
   align-items: start;
   margin-bottom: 14px;
 }
 
+.previewHeader > div:first-child {
+  grid-column: 2;
+  text-align: center;
+}
+
 .previewTools {
+  grid-column: 3;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -597,9 +605,14 @@ canvas {
   }
 
   .previewHeader {
+    grid-template-columns: 1fr;
     align-items: stretch;
-    flex-direction: column;
     gap: 10px;
+  }
+
+  .previewHeader > div:first-child,
+  .previewTools {
+    grid-column: 1;
   }
 
   .previewTools {
@@ -651,6 +664,7 @@ canvas {
 
   .modeCard {
     grid-template-columns: 36px minmax(0, 1fr);
+    width: 100%;
     padding: 8px;
   }
 
