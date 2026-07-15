@@ -1942,7 +1942,15 @@ window.addEventListener("resize", updatePreviewZoom);
 document.addEventListener("paste", pasteImageFromClipboard);
 els.pngBtn.addEventListener("click", downloadPng);
 els.pntBtn.addEventListener("click", downloadPnt);
+els.canvasWrap.addEventListener("dblclick", (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+});
 els.canvas.addEventListener("click", (event) => {
+  if (event.detail > 1) {
+    event.preventDefault();
+    return;
+  }
   const rect = els.canvas.getBoundingClientRect();
   const x = Math.floor((event.clientX - rect.left) * els.canvas.width / rect.width);
   const y = Math.floor((event.clientY - rect.top) * els.canvas.height / rect.height);

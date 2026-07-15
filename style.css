@@ -89,6 +89,7 @@ body[data-game="atlas"] {
   order: 2;
   width: 100%;
   position: relative;
+  z-index: 2;
 }
 
 .guideSteps {
@@ -595,7 +596,9 @@ button:hover {
 
 .previewPanel {
   grid-area: preview;
-  position: static;
+  position: sticky;
+  top: 12px;
+  z-index: 1;
   display: grid;
   grid-template-rows: auto auto minmax(0, 1fr);
   min-height: 0;
@@ -683,6 +686,8 @@ button:hover {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 16px 12px 12px;
+  user-select: none;
+  touch-action: manipulation;
 }
 
 canvas {
@@ -692,6 +697,8 @@ canvas {
   image-rendering: pixelated;
   border: 1px solid var(--line);
   background: transparent;
+  user-select: none;
+  touch-action: manipulation;
 }
 
 .dyeList {
