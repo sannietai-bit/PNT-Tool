@@ -153,6 +153,7 @@ body[data-game="atlas"] {
 .topInfo {
   grid-area: top;
   max-height: none;
+  background: rgba(25, 29, 33, .46);
 }
 
 .languageBar {
