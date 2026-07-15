@@ -45,7 +45,13 @@ body[data-game="atlas"] {
 .app {
   display: grid;
   grid-template-columns: minmax(291px, 354px) minmax(520px, 1fr) minmax(291px, 354px);
-  grid-template-rows: auto auto;
+  grid-template-areas:
+    "language language language"
+    "top top top"
+    "left preview right"
+    "guide guide guide";
+  grid-template-rows: auto auto auto auto;
+  align-items: start;
   gap: 12px;
   max-width: 1500px;
   min-height: 100vh;
@@ -79,9 +85,10 @@ body[data-game="atlas"] {
 }
 
 .guidePanel {
-  grid-column: 1 / -1;
+  grid-area: guide;
   order: 2;
   width: 100%;
+  position: relative;
 }
 
 .guideSteps {
@@ -142,12 +149,12 @@ body[data-game="atlas"] {
 }
 
 .topInfo {
-  grid-column: 1 / -1;
+  grid-area: top;
   max-height: none;
 }
 
 .languageBar {
-  grid-column: 1 / -1;
+  grid-area: language;
   order: -1;
   display: flex;
   justify-content: center;
@@ -586,6 +593,7 @@ button:hover {
 }
 
 .previewPanel {
+  grid-area: preview;
   position: sticky;
   top: 12px;
   display: grid;
@@ -594,6 +602,14 @@ button:hover {
   height: calc(100vh - 150px);
   min-height: 520px;
   overflow: hidden;
+}
+
+.leftPanel {
+  grid-area: left;
+}
+
+.rightPanel {
+  grid-area: right;
 }
 
 .previewHeader {
@@ -716,6 +732,13 @@ canvas {
 
   .app {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "language"
+      "top"
+      "left"
+      "preview"
+      "right"
+      "guide";
     grid-template-rows: none;
     min-height: auto;
     height: auto;
