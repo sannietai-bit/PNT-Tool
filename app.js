@@ -758,7 +758,7 @@ const MODE_ICON_KIND = {
 };
 
 const els = {
-  language: document.getElementById("languageSelect"),
+  languageBar: document.getElementById("languageBar"),
   appTitle: document.getElementById("appTitle"),
   seoIntro: document.getElementById("seoIntro"),
   cropSelectTitle: document.getElementById("cropSelectTitle"),
@@ -773,7 +773,6 @@ const els = {
   guideStep3Text: document.getElementById("guideStep3Text"),
   guideStep4Title: document.getElementById("guideStep4Title"),
   guideStep4Text: document.getElementById("guideStep4Text"),
-  languageLabel: document.getElementById("languageLabel"),
   modeLabel: document.getElementById("modeLabel"),
   mode: document.getElementById("modeSelect"),
   modeIcon: document.getElementById("modeIcon"),
@@ -902,6 +901,13 @@ function updateGameTabs() {
   }
 }
 
+function updateLanguageBar() {
+  if (!els.languageBar) return;
+  for (const button of els.languageBar.querySelectorAll("[data-lang]")) {
+    button.classList.toggle("isActive", button.dataset.lang === state.language);
+  }
+}
+
 function scrollToGuidePanel() {
   if (!els.guidePanel) return;
   els.guidePanel.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -951,7 +957,7 @@ function applyLanguage() {
   setText(els.guideStep4Text, "guideStep4Text");
   const guideLabel = document.querySelector("[data-role=guideTabLabel]");
   if (guideLabel) guideLabel.textContent = t("guideTab");
-  setText(els.languageLabel, "language");
+  updateLanguageBar();
   setText(els.modeLabel, "modeLabel");
   setText(els.wallColsLabel, "wallCols");
   setText(els.wallRowsLabel, "wallRows");
@@ -1917,8 +1923,10 @@ function downloadWall(kind) {
   renderWall();
 }
 
-els.language.addEventListener("change", () => {
-  state.language = els.language.value;
+els.languageBar.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-lang]");
+  if (!button || button.dataset.lang === state.language) return;
+  state.language = button.dataset.lang;
   applyLanguage();
   setupUploads({ preserveValues: true });
 });

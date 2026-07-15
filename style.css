@@ -146,9 +146,45 @@ body[data-game="atlas"] {
   max-height: none;
 }
 
+.languageBar {
+  grid-column: 1 / -1;
+  order: -1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2px;
+  min-height: 18px;
+  padding: 0 2px;
+  color: rgba(242, 245, 247, .72);
+  font-size: 9px;
+}
+
+.languageBar button {
+  min-height: 18px;
+  padding: 0 5px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 9px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.languageBar button:hover,
+.languageBar button.isActive {
+  color: var(--text);
+  background: transparent;
+}
+
+.languageBar button.isActive {
+  text-decoration-thickness: 2px;
+}
+
 .topInfoHeader {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr);
   align-items: start;
   gap: 16px;
 }
@@ -228,18 +264,6 @@ body[data-game="atlas"] {
 
 .gameTab.isActive::after {
   background: var(--text);
-}
-
-.languageField {
-  display: grid;
-  gap: 6px;
-  min-width: 150px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.languageField select {
-  min-height: 34px;
 }
 
 .workflowTitle,
@@ -732,8 +756,9 @@ canvas {
     grid-template-columns: 1fr;
   }
 
-  .languageField {
-    min-width: 0;
+  .languageBar {
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   h1 {
