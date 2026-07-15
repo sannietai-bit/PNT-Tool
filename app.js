@@ -816,8 +816,8 @@ function ensureGameTabs() {
   tabs.id = "gameTabs";
   tabs.className = "gameTabs";
   tabs.innerHTML = `
-    <button type="button" class="gameTab" data-game="ark">ARK</button>
-    <button type="button" class="gameTab" data-game="atlas">Atlas</button>
+    <button type="button" class="gameTab" data-game="ark"><span aria-hidden="true">▣</span><span>ARK</span></button>
+    <button type="button" class="gameTab" data-game="atlas"><span aria-hidden="true">✦</span><span>Atlas</span></button>
   `;
   els.appTitle.insertAdjacentElement("afterend", tabs);
   tabs.addEventListener("click", (event) => {
