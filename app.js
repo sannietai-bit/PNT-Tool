@@ -1205,7 +1205,7 @@ function ensureGameTabs() {
   tabs.id = "gameTabs";
   tabs.className = "gameTabs";
   tabs.innerHTML = `
-    <button type="button" class="gameTab" data-game="ark"><span class="gameTabIcon" aria-hidden="true"><svg viewBox="0 0 82 70" role="img"><path fill="currentColor" d="M12 12c8-5 18 0 18 10 0 5-2 9-6 12v16c0 4-3 7-7 7s-7-3-7-7V35C4 31 2 23 5 17c1-2 3-4 7-5Zm16 33c8-14 22-18 38-8 8 5 13 11 15 19-16-2-29-5-40-10-4 3-8 4-13 4v-5Zm15 5c4 1 8 2 12 3v9c0 2-1 3-3 3h-4c-2 0-3-1-3-3v-8l-2-1v-3Zm-18 0h8v12c0 2-1 3-3 3h-4c-2 0-3-1-3-3V50h2Z"/><circle cx="13" cy="20" r="2.4" fill="#f3dfac"/></svg></span><span>ARK</span></button>
+    <button type="button" class="gameTab" data-game="ark"><span class="gameTabIcon" aria-hidden="true"><svg viewBox="0 0 64 64" role="img"><path fill="currentColor" d="M32 5 49 32 32 59 15 32 32 5Zm0 11-9 16 9 16 9-16-9-16Z"/><path fill="#f3dfac" d="M32 18 40 32 32 46 24 32l8-14Z"/><path fill="currentColor" d="M31 23h2v18h-2zM23 31h18v2H23z"/></svg></span><span>ARK</span></button>
     <button type="button" class="gameTab" data-game="atlas"><span class="gameTabIcon" aria-hidden="true"><svg viewBox="0 0 64 64" role="img"><path fill="currentColor" d="M29 7h4v7h-4zM34 8h16l-6 4 6 4H34V8ZM17 19h29c-1 8-1 13 1 21H16c-3-8-3-14 1-21ZM13 43h38l-3 7H16l-3-7ZM28 52h6v4h-6zM6 46h52c-1 8-4 13-9 15H16C10 59 7 54 6 46Z"/></svg></span><span>Atlas</span></button>
     <button type="button" class="gameTab" data-guide="guide"><span aria-hidden="true">?</span><span data-role="guideTabLabel">${t("guideTab")}</span></button>
     <a class="gameTab gameTabLink" href="https://groups.google.com/g/pnt-tool/" target="_blank" rel="noopener"><span aria-hidden="true">☷</span><span data-role="discussionTabLabel">${t("discussionTab")}</span></a>
