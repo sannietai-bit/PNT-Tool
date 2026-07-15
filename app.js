@@ -211,7 +211,7 @@ const GAME_MODE_GROUPS = {
   ark: [
     {
       key: "group.arkStructures",
-      modes: ["arkPaintingCanvas", "arkWarMap", "arkSmallWoodSign", "arkSmallMetalSign", "arkWallWoodSign", "arkWallMetalSign", "arkWoodBillboard", "arkMetalBillboard", "arkSingleFlag", "arkFlag", "arkMultiPanelFlag", "arkBroodmotherFlag", "arkMegapithecusFlag", "arkDragonFlag", "arkShagRug", "arkSpotlight"],
+      modes: ["arkPaintingCanvas", "arkSmallWoodSign", "arkSmallMetalSign", "arkWallWoodSign", "arkWallMetalSign", "arkWoodBillboard", "arkMetalBillboard", "arkSingleFlag", "arkFlag", "arkMultiPanelFlag", "arkShagRug", "arkSpotlight"],
     },
   ],
   atlas: [
