@@ -152,8 +152,8 @@ body[data-game="atlas"] {
 
 .gameTabIcon {
   display: inline-grid;
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 24px;
   place-items: center;
 }
 
