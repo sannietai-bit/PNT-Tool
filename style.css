@@ -720,9 +720,17 @@ input[type="color"] {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 14px;
+  margin-top: 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.checkRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  margin-top: 14px;
 }
 
 .check input[type="checkbox"] {
@@ -1131,6 +1139,11 @@ canvas {
 
   .actions, .grid2, .grid3, .quickActions {
     grid-template-columns: 1fr;
+  }
+
+  .checkRow {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .guideSteps {
