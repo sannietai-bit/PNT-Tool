@@ -340,15 +340,18 @@ body[data-game="atlas"] {
   position: relative;
   display: block;
   width: fit-content;
-  margin-bottom: 10px;
-  padding-bottom: 9px;
+  margin: 0 auto 10px;
   font-size: 17px;
+  text-align: center;
 }
 
 .previewHeader h2,
 .sectionTitle {
   display: block;
   width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .workflowTitle::after,
@@ -366,13 +369,11 @@ body[data-game="atlas"] {
 .previewHeader h2::before,
 .sectionTitle::before {
   content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin-right: 7px;
-  border-radius: 50%;
-  background: var(--rust);
-  vertical-align: 2px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 0 auto 6px;
+  background: var(--hairline);
 }
 
 .previewSubhead {
