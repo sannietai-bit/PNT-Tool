@@ -557,8 +557,11 @@ input[type="color"] {
 .uploadDrop:hover,
 .uploadDrop:focus-visible,
 .uploadDrop.isDragOver {
-  border-color: var(--accent2);
-  background: rgba(37, 111, 115, .12);
+  border-color: rgba(122, 75, 34, .82);
+  background: rgba(255, 246, 216, .64);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, .28),
+    0 0 0 2px rgba(122, 75, 34, .10);
   outline: none;
 }
 
