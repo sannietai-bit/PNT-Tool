@@ -346,23 +346,14 @@ body[data-game="atlas"] {
 .previewHeader h2,
 .sectionTitle {
   color: var(--rust);
-}
-
-.workflowTitle {
   position: relative;
   display: block;
   width: fit-content;
-  margin: 0 auto 10px;
-  font-size: 17px;
-  text-align: center;
-}
-
-.previewHeader h2,
-.sectionTitle {
-  display: block;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  min-width: 136px;
+  margin: 0 auto 14px;
+  padding: 8px 0 9px;
+  font-size: 18px;
+  line-height: 1.2;
   text-align: center;
 }
 
@@ -370,28 +361,44 @@ body[data-game="atlas"] {
 .previewHeader h2::after,
 .sectionTitle::after {
   content: "";
+  position: absolute;
+  left: 50%;
   display: block;
-  width: calc(100% + 40px);
+  width: 136px;
   max-width: min(220px, calc(100vw - 64px));
   height: 1px;
   min-height: 1px;
   max-height: 1px;
-  margin: 6px auto 0;
   background: var(--hairline);
+  transform: translateX(-50%);
 }
 
 .workflowTitle::before,
 .previewHeader h2::before,
 .sectionTitle::before {
   content: "";
+  position: absolute;
+  left: 50%;
   display: block;
-  width: calc(100% + 40px);
+  width: 136px;
   max-width: min(220px, calc(100vw - 64px));
   height: 1px;
   min-height: 1px;
   max-height: 1px;
-  margin: 0 auto 6px;
   background: var(--hairline);
+  transform: translateX(-50%);
+}
+
+.workflowTitle::before,
+.previewHeader h2::before,
+.sectionTitle::before {
+  top: 0;
+}
+
+.workflowTitle::after,
+.previewHeader h2::after,
+.sectionTitle::after {
+  bottom: 0;
 }
 
 .previewSubhead {
@@ -730,7 +737,6 @@ input[type="color"] {
 }
 
 .sidePanelTitle {
-  margin-top: 0;
   margin-bottom: 14px;
 }
 
@@ -1016,7 +1022,7 @@ canvas {
 }
 
 .sectionTitle {
-  margin-top: 18px;
+  margin-top: 0;
 }
 
 .dye {
