@@ -55,7 +55,10 @@ body[data-game="atlas"] {
 
 .app {
   display: grid;
-  grid-template-columns: minmax(291px, 354px) minmax(520px, 1fr) minmax(291px, 354px);
+  grid-template-columns:
+    minmax(280px, clamp(320px, 22vw, 420px))
+    minmax(520px, 1fr)
+    minmax(280px, clamp(320px, 22vw, 420px));
   grid-template-areas:
     "language language language"
     "top top top"
@@ -64,7 +67,8 @@ body[data-game="atlas"] {
   grid-template-rows: auto auto auto auto;
   align-items: start;
   gap: 12px;
-  max-width: 1500px;
+  width: 100%;
+  max-width: none;
   min-height: 100vh;
   height: auto;
   margin: 0 auto;
@@ -891,6 +895,7 @@ button:hover {
   position: static;
   display: grid;
   grid-template-rows: auto auto auto auto;
+  align-content: start;
   min-height: 0;
   height: auto;
   min-height: calc(100vh - 150px);
