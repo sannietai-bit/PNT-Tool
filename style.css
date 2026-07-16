@@ -741,11 +741,11 @@ input[type="color"] {
 }
 
 .exportPanel .field {
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 .exportPanel .actions {
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 .exportBoxTitle {
@@ -907,6 +907,20 @@ button:hover {
 .exportPanel {
   margin-top: 12px;
   min-height: 0;
+  justify-self: center;
+  width: 60%;
+  min-width: min(100%, 420px);
+}
+
+.exportInline {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(220px, auto);
+  gap: 10px;
+  align-items: end;
+}
+
+.exportInline .actions {
+  grid-template-columns: minmax(92px, 1fr) minmax(132px, 1.15fr);
 }
 
 .previewHeader {
@@ -1088,6 +1102,15 @@ canvas {
     height: auto;
     overflow: visible;
     grid-template-rows: auto auto minmax(260px, auto) auto;
+  }
+
+  .exportPanel {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .exportInline {
+    grid-template-columns: 1fr;
   }
 
   .rightPanel {
