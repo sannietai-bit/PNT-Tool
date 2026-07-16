@@ -113,8 +113,8 @@ body[data-game="atlas"] {
   scrollbar-gutter: auto;
   height: auto;
   min-height: 0;
-  max-height: calc(100vh - 150px);
-  overflow-y: auto;
+  max-height: none;
+  overflow: visible;
 }
 
 .rightColumn {
