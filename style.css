@@ -909,7 +909,7 @@ button:hover {
 }
 
 .rightPanel {
-  min-height: 676px;
+  min-height: 0;
   height: auto;
   overflow-y: auto;
 }
