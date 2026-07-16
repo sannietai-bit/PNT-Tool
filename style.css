@@ -111,11 +111,9 @@ body[data-game="atlas"] {
 
 .leftPanel {
   scrollbar-gutter: auto;
-  height: calc(100vh - 150px);
-  min-height: 520px;
-}
-
-.leftPanel {
+  height: auto;
+  min-height: 0;
+  max-height: calc(100vh - 150px);
   overflow-y: auto;
 }
 
@@ -900,8 +898,7 @@ button:hover {
   align-content: start;
   min-height: 0;
   height: auto;
-  min-height: calc(100vh - 150px);
-  overflow: auto;
+  overflow: visible;
 }
 
 .leftPanel {
