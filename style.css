@@ -588,6 +588,10 @@ input[type="color"] {
   font-size: 14px;
 }
 
+.check input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+
 .actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -703,7 +707,7 @@ button:hover {
   background: var(--panel2);
   border: 1px solid var(--line);
   text-align: center;
-  color: var(--accent2);
+  color: var(--accent);
   font-weight: 800;
 }
 
