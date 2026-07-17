@@ -225,9 +225,9 @@ const GAME_MODE_GROUPS = {
 const I18N = {
   "zh-TW": {
     appTitle: "ATLAS PNT 製作工具",
-    seoTitle: "PNT Tool - ARK / ATLAS PNT 圖片轉換器",
-    seoDescription: "PNT Tool 是 ARK / ATLAS 遊戲圖片轉換器，可將 PNG/JPG/WebP 製作成 PNT/PNG，支援畫布、旗幟、船帆、人物紋身與多幅畫作拼圖牆，適合生存遊戲玩家使用。",
-    seoIntro: "ARK / ATLAS PNT 圖片轉換器，支援畫布、旗幟、船帆、人物紋身與多幅畫作拼圖牆，適合生存遊戲玩家製作遊戲圖片。",
+    seoTitle: "PNT Tool - ARK / ATLAS PNT 圖片轉換器 | ARK ATLAS PNT Image Converter",
+    seoDescription: "PNT Tool 是 ARK / ATLAS 遊戲圖片轉換器，可將 PNG/JPG/WebP 製作成 PNT/PNG，支援畫布、旗幟、船帆、人物紋身與多幅畫作拼圖牆。ARK / ATLAS PNT image converter for canvases, flags, sails, tattoos, wall mosaics, and survival game paint files.",
+    seoIntro: "ARK / ATLAS PNT 圖片轉換器，支援畫布、旗幟、船帆、人物紋身與多幅畫作拼圖牆。English: ARK / ATLAS PNT image converter for PNG, JPG, WebP, canvases, flags, sails, tattoos, and wall mosaics.",
     appIntro: "將圖片在本機瀏覽器轉成 ATLAS 可用的 PNT/PNG，不會上傳，支援船帆、畫作、旗幟、人物紋身與多幅畫作拼圖牆；完成後放入 <code>Steam\\steamapps\\common\\ATLAS\\ShooterGame\\Saved\\MyPaintings</code>。",
     language: "語言",
     modeLabel: "類型",

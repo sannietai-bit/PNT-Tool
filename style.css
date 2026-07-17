@@ -266,13 +266,17 @@ body[data-game="atlas"] {
   min-width: 0;
 }
 
-.visitorCounter {
+.siteVisitorCounter {
+  position: fixed;
+  top: 6px;
+  left: 8px;
+  z-index: 80;
   display: inline-flex;
   align-items: center;
   min-height: 22px;
 }
 
-.visitorCounter img {
+.siteVisitorCounter img {
   display: block;
   height: 20px;
   max-width: 180px;
