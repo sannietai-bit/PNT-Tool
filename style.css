@@ -1046,8 +1046,7 @@ button:hover {
 .previewHeader {
   display: grid;
   grid-template-areas:
-    ". title tools"
-    ". card tools";
+    ". title tools";
   grid-template-columns: minmax(120px, 1fr) minmax(260px, 440px) minmax(120px, 1fr);
   align-items: center;
   gap: 8px 12px;
@@ -1060,8 +1059,15 @@ button:hover {
   text-align: center;
 }
 
-.previewHeader .modeCard {
-  grid-area: card;
+.previewModeCardSlot {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  min-width: min(100%, 420px);
+  margin: 12px auto 0;
+}
+
+.previewModeCardSlot .modeCard {
   justify-self: center;
   width: min(100%, 440px);
 }
@@ -1313,7 +1319,6 @@ canvas {
   .previewHeader {
     grid-template-areas:
       "title"
-      "card"
       "tools";
     grid-template-columns: 1fr;
     align-items: stretch;
@@ -1354,6 +1359,11 @@ canvas {
     padding: 10px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .previewModeCardSlot {
+    width: 100%;
+    min-width: 0;
   }
 
   canvas {
