@@ -998,7 +998,7 @@ button:hover {
   grid-area: right;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
 }
 
 .rightPanel {
@@ -1018,7 +1018,7 @@ button:hover {
 .rightColumn .exportPanel {
   width: 100%;
   min-width: 0;
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .exportInline {
